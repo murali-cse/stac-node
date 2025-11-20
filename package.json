@@ -1,0 +1,33 @@
+{
+  "name": "sdui",
+  "version": "1.0.0",
+  "main": "./dist/sdui.js",
+  "types": "./dist/sdui.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:types": "tsc",
+    "build:js": "esbuild src/sdui.ts --bundle --outfile=dist/sdui.js --format=esm --platform=node",
+    "build": "npm run build:types && npm run build:js",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "esbuild": "^0.27.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.47.0"
+  }
+}

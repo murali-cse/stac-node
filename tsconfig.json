@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "NodeNext", 
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": false, // explicitly set to false (or remove)
+    "declaration": true, // Must be true to emit declaration files
+    "emitDeclarationOnly": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
