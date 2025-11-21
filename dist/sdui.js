@@ -1,13 +1,16 @@
 // src/core/widget.ts
+var StacElement = class {
+};
 var Widget = class _Widget {
   constructor(props = {}) {
     this.props = props;
   }
   toJson() {
-    return {
+    const out = {
       type: this.type,
       ...this.serializeProps()
     };
+    return out;
   }
   serializeProps() {
     const output = {};
@@ -113,7 +116,26 @@ var Container = class extends Widget {
 };
 
 // src/core/button_style.ts
-var ButtonStyle = class {
+var ButtonStyle = class extends StacElement {
+  constructor(props) {
+    super();
+    this.forgroundColor = props?.forgroundColor;
+    this.backgroundColor = props?.backgroundColor;
+    this.disabledForegroundColor = props?.disabledForegroundColor;
+    this.disabledBackgroundColor = props?.disabledBackgroundColor;
+    this.shadowColor = props?.shadowColor;
+    this.surfaceTintColor = props?.surfaceTintColor;
+  }
+  toJson() {
+    return JSON.stringify({
+      forgroundColor: this.forgroundColor,
+      backgroundColor: this.backgroundColor,
+      disabledForegroundColor: this.disabledForegroundColor,
+      disabledBackgroundColor: this.disabledBackgroundColor,
+      shadowColor: this.shadowColor,
+      surfaceTintColor: this.surfaceTintColor
+    });
+  }
 };
 
 // src/core/edge_insets.ts
