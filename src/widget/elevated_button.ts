@@ -1,4 +1,4 @@
-import { ButtonStyle } from "../core/button_style.ts";
+import { ButtonStyle } from "../core/foundation/theme/button_style.ts";
 import { Widget } from "../core/widget.ts";
 
 type ElevatedButtonProps = {

@@ -1,5 +1,5 @@
-import { EdgeInsets } from "./edge_insets.ts";
-import { StacElement } from "./widget.ts";
+import { EdgeInsets } from "../../edge_insets.ts";
+import { StacElement } from "../../widget.ts";
 
 type ButtonStyleProps = {
   forgroundColor?: string;
